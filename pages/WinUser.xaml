@@ -1,0 +1,53 @@
+﻿<Window x:Class="Lab.pages.WinUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab.pages"
+        mc:Ignorable="d"
+        Title="Пользователь" Height="460" Width="1000" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="0" Background="#FFEDF2F6">
+            <Border BorderBrush="#FFB0C4CC" BorderThickness="1" Width="100" Height="100" Canvas.Left="20" Canvas.Top="40">
+                <Image x:Name="Avatar" Width="100" Height="100"></Image>
+            </Border>
+            <TextBlock x:Name="RoleLabel" FontWeight="Bold" FontSize="16" Canvas.Left="20" Canvas.Top="10"/>
+            <TextBlock x:Name="NameLabel" FontSize="16" Canvas.Left="130" Canvas.Top="40"/>
+            <TextBlock x:Name="SurnameLabel" FontSize="16" Canvas.Left="130" Canvas.Top="60"/>
+            <TextBlock x:Name="PatronymicLabel" FontSize="16" Canvas.Left="130" Canvas.Top="80"/>
+
+            <!-- Кнопки для различных ролей -->
+            <!--Лаборант-->
+            <Button x:Name="AcceptBiomaterialButton" Content="Сформировать отчет" FontSize="14" Width="200" Background="#FFD2E0E7" BorderBrush="#FFB0C4CC" BorderThickness="1" Canvas.Left="20" Canvas.Top="150" Visibility="Collapsed" Click="AcceptBiomaterialButton_Click" />
+            <Button x:Name="GenerateReportButton" Content="Создать заказ" FontSize="14" Width="200" Background="#FFD2E0E7" BorderBrush="#FFB0C4CC" BorderThickness="1" Canvas.Left="20" Canvas.Top="190" Visibility="Collapsed" Click="GenerateReportButton_Click" />
+            <!--Бухгалтер-->
+            <Button x:Name="ViewReportsButton" Content="Просмотреть отчеты" FontSize="14" Width="200" Background="#FFD2E0E7" BorderBrush="#FFB0C4CC" BorderThickness="1" Canvas.Left="20" Canvas.Top="150" Visibility="Collapsed" Click="ViewReportsButton_Click"/>
+            <!--Aдминистратор-->
+            <Button x:Name="StoryUsersButton" Content="История входа" Canvas.Left="20" Canvas.Top="150" FontSize="14" Width="200" Background="#FFD2E0E7" BorderBrush="#FFB0C4CC" BorderThickness="1" Visibility="Collapsed" Click="StoryUsersButton_Click" />
+            <Button x:Name="NewSotrydButton" Content="Добавить сотрудника" FontSize="14" Width="200" Background="#FFD2E0E7" BorderBrush="#FFB0C4CC" BorderThickness="1" Canvas.Left="20" Canvas.Top="190" Visibility="Collapsed" Click="NewSotrydButton_Click" />
+            <!--Лаборант-исследователь-->
+            <Button x:Name="WorkWithAnalyzerButton" Content="Работать с анализатором" FontSize="14" Width="200" Background="#FFD2E0E7" BorderBrush="#FFB0C4CC" BorderThickness="1" Canvas.Left="20" Canvas.Top="150" Visibility="Collapsed" Click="WorkWithAnalyzerButton_Click" />
+            <!--Пользователь-->
+            <TextBlock x:Name="TextForUser" TextWrapping="Wrap" FontSize="17" Width="200" Height="200" Canvas.Top="190" Canvas.Left="20"  TextAlignment="Center" Visibility="Collapsed">
+                Для записи на прием<LineBreak/>
+                и получения результатов <LineBreak/>
+                позвоните <LineBreak/>
+                +7(555)875-34-34
+            </TextBlock>
+
+            <Button Name="Authorization" Background="#FFD2E0E7" FontSize="16" Content="Выйти" Width="100" Canvas.Left="20" Canvas.Bottom="20"  BorderBrush="#FFB0C4CC" BorderThickness="1" Click="Authorization_Click"/>
+            <Label x:Name="Timer" FontSize="16" Canvas.Left="140" Canvas.Bottom="20"/>
+        </Canvas>
+        <Frame x:Name="MyFrame" Grid.Column="1" >
+            <Frame.Background>
+                <ImageBrush ImageSource="/pages/fon1.jpg" Stretch="UniformToFill"/>
+            </Frame.Background>
+        </Frame>
+        
+       
+    </Grid>
+</Window>

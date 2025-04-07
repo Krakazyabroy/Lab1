@@ -1,0 +1,48 @@
+﻿<Page x:Class="Lab.pages.PageStory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lab.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="460" d:DesignWidth="700"
+      Title="PageStory"
+      Loaded="Page_Loaded">
+
+    <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="История входа" FontSize="24" FontWeight="Bold"></Label>
+            <Border Height="15" Background="#FFD2E0E7" VerticalAlignment="Bottom"></Border>
+            <DataGrid x:Name="ListStory" Grid.Row="2" AutoGenerateColumns="False" FontSize="14">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding  users_.name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding  users_.surname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Роль" Binding="{Binding  users_.role_.role}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Логин" Binding="{Binding  users_.login}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="IP" Binding="{Binding  ip}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Время входа" Binding="{Binding  startenter}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Время выхода" Binding="{Binding  lastenter}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Причина выхода" Binding="{Binding cause_.cause }"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        
+        <Canvas Grid.Row="1">
+            <Label Content="Введите логин для поиска" FontSize="16" Canvas.Left="15" Canvas.Top="0"/>
+            <TextBox x:Name="LoginFilterTextBox" Width="200" FontSize="14" Canvas.Left="20" Canvas.Top="30" TextChanged="LoginFilterTextBox_TextChanged"/>
+           
+            <Label Content="Введите дату для поиска" FontSize="16" Canvas.Left="245" Canvas.Top="0"/>
+            <DatePicker x:Name="DateFilterPicker" Width="200" FontSize="14" Canvas.Left="250" Canvas.Top="30" SelectedDateChanged="DateFilterPicker_SelectedDateChanged"/>
+
+            <Label Content="Выберите причину для поиска" FontSize="16" Canvas.Left="475" Canvas.Top="0"/>
+            <ComboBox x:Name="CouseFilter_ComboBox" Width="200" FontSize="14" Canvas.Left="480" Canvas.Top="30" SelectionChanged="CouseFilter_ComboBox_SelectionChanged" />
+
+        </Canvas>
+
+    </Grid>
+</Page>

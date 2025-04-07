@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eba4bd1e790743d9aaf5e50adaf5e26a" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="LabModel.analyzer_" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.cause_" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.check_" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.data_analyzer_" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.insurance_company_" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.order_" Width="1.5" PointX="11.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.policy_" Width="1.5" PointX="3.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.role_" Width="1.5" PointX="3.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.s_in_o_" Width="1.5" PointX="13.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.services_" Width="1.5" PointX="11.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.status_" Width="1.5" PointX="9" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.story_" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabModel.users_" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="LabModel.FK_data_analyzer__analyzer_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_story__cause_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_check__insurance_company_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_check__users_2" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_data_analyzer__s_in_o_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_data_analyzer__users_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_users__insurance_company_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_order__status_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_order__users_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_s_in_o__order_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_users__policy_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_users__role_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_s_in_o__services_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_s_in_o__status_" ManuallyRouted="false" />
+        <AssociationConnector Association="LabModel.FK_story__users_" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
